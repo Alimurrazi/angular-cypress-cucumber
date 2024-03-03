@@ -6,9 +6,15 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/bdd-cucumber/step-defination/*.step.cy.ts"
+  },
   "dependencies": {
     "@angular/animations": "^15.2.0",
     "@angular/common": "^15.2.0",
@@ -26,7 +32,11 @@
     "@angular-devkit/build-angular": "^15.2.10",
     "@angular/cli": "~15.2.10",
     "@angular/compiler-cli": "^15.2.0",
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@cypress/webpack-preprocessor": "^6.0.1",
+    "@cypress/schematic": "^2.5.1",
     "@types/jasmine": "~4.3.0",
+    "cypress": "^13.6.4",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
